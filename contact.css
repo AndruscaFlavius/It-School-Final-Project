@@ -1,0 +1,148 @@
+/*Navbar*/
+.logo {
+  font-family: "sofia", sans-serif;
+  margin-left: 100px;
+  color: rgb(190, 148, 69);
+  height: 40px;
+}
+
+.navbar-nav > li > a:hover {
+  font-size: 15px;
+}
+
+.active {
+  color: rgb(47, 196, 84) !important;
+}
+
+.nav-link {
+  font-family: "Times New Roman", Times, serif;
+  font-size: 17px;
+  font-weight: 100;
+}
+
+.navbar-nav li {
+  padding: 0px 25px 0px 25px;
+}
+
+.hidden-spacer {
+  height: 56px;
+}
+
+.navbar-nav {
+  margin-right: 80px;
+}
+.navbar {
+  margin: 20px 150px 20px 150px;
+  border-radius: 20px;
+  box-shadow: 0px 0px 20px 0px rgb(151, 109, 31);
+}
+
+.brand-name {
+  display: flex;
+  justify-content: end;
+  margin-right: 400px;
+  margin-top: 150px;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 60px;
+  font-weight: 200px;
+  color: rgb(190, 148, 69);
+}
+.h4-text {
+  font-family: "Times New Roman", Times, serif;
+  font-size: 30px;
+  font-weight: 200px;
+  color: rgb(190, 148, 69);
+  margin-top: 30px;
+}
+/*ABONARE*/
+
+h1 {
+  text-align: center;
+}
+
+form {
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+label,
+input,
+button {
+  display: block;
+  margin-bottom: 10px;
+}
+
+button {
+  cursor: pointer;
+}
+
+#mesaj {
+  margin-top: 10px;
+  text-align: center;
+  font-weight: bold;
+}
+
+/*formular abonare*/
+.body-form {
+  border: none;
+  box-shadow: 0px 0px 20px 0px rgb(151, 109, 31);
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  border-radius: 20px;
+  padding: 20px;
+}
+.text-f {
+  font-family: "Times New Roman", Times, serif;
+  font-size: 20px;
+  color: rgb(151, 109, 31);
+}
+.buton-f {
+  font-family: "Times New Roman", Times, serif;
+  border-radius: 20px;
+  color: white;
+  background-color: rgb(151, 109, 31);
+  border: none;
+}
+.buton-f:hover {
+  background-color: rgb(190, 148, 69);
+}
+.form {
+  font-family: "Times New Roman", Times, serif;
+  margin-top: 50px;
+  margin-bottom: 20px;
+  color: rgb(151, 109, 31);
+}
+
+/*footer*/
+
+.footer2 {
+  margin-top: 100px;
+}
+.pic {
+  height: 30px;
+}
+.pic1 {
+  height: 25px;
+}
+
+h4 {
+  font-family: "Times New Roman", Times, serif;
+  color: rgb(151, 109, 31);
+}
+.f-text {
+  font-family: "Times New Roman", Times, serif;
+  font-weight: 100px;
+  color: rgb(190, 148, 69);
+}
+
+hr {
+  border: none;
+  border-top: 2px solid rgb(151, 109, 31);
+}
+
+.container3{
+  background-image: url(images/Premium\ product\ \(6\).png);
+  background-size: cover;
+  height: 100vh;
+}

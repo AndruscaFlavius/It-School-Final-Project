@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Project</title>
+    <!--Link pentru icons-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+    <!--Link pentru font-->
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
+    <!--Link bootstrap-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!--Link pagina css-->
+    <link rel="stylesheet" href="contact.css">
+</head>
+
+<body>
+
+<!--Aici incepe sectiunea Nav-bar-->
+
+  <header>
+    <nav class="navbar navbar-expand-sm">
+      <div class="container-fluid">
+          <h1 class="logo">Honey Land</h1>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="/Index.html"><b>Home</b></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="/Store.html"><b>Store</b></a>
+              </li>	
+              <li class="nav-item">
+                <a class="nav-link active" href="/contact.html"><b>Contact Us</b></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+   </nav>
+  </header>
+
+  <!--formular de abonare-->
+<div class="container3">
+<h1 class="form">Newsletter</h1>
+<form class="body-form" id="abonareForm">
+    <label class="text-f" for="nume">Last Name:</label>
+    <input type="text" id="nume" required minlength="5" maxlength="15" pattern="[A-Za-z]+" title="Numele trebuie să conțină între 5 și 15 litere, fără numere.">
+    <br>
+    <label class="text-f" for="prenume">First Name:</label>
+    <input type="text" id="prenume" required minlength="5" maxlength="15" pattern="[A-Za-z]+" title="Prenumele trebuie să conțină între 5 și 15 litere, fără numere.">
+    <br>
+    <label class="text-f" for="email">E-mail:</label>
+    <input type="email" id="email" required pattern="[a-zA-Z0-9._%+-]+@(gmail\.com|yahoo\.com)$" title="Adresa de email trebuie să fie de tipul @yahoo.com sau @gmail.com.">
+    <br>
+    <label class="text-f" for="notificari">I want receive Notifications:</label>
+    <input type="checkbox" id="notificari">
+    <br>
+    <button class="buton-f" type="submit">Subscribe</button>
+</form>
+<div id="mesaj"></div>
+</div>
+<!--Footer-->
+
+<div class="container">
+  <footer class="footer2">
+    
+    <div class="container4">
+      <div class="row ">
+        <div class="col-md-4">
+          <h4>ABOUT US</h4>
+          <p class="f-text"> SC.HoneyLand.Srl was born in 2023 in Timis country, Romania. We are big lovers of honey and quality bee products,
+            so we decided to share our passion with you. This is the place where you can find different be products, from honey to propolis.
+            All our products are BIO and help you keep your health and energy in the most natural way!<br>
+            Honey Land can be found on all social networks, as well as on Youtube, where we regulary post videos of our work.
+          </p>
+        </div>
+        <div class="col-md-4">
+          <h4>SOCIAL MEDIA</h4>
+          <ul class="list-unstyled">
+            <li><a href="#"><img class="pic" src="/images/instagram.webp">@Honey_Land</a></li><br>
+            <li><a href="#"><img class="pic" src="/images/facebook.png">HoneyLand</a></li><br>
+            <li><a href="#"><img class="pic1" src="/images/Logo_of_Twitter.svg.png">@Honey_Land</a></li><br>
+            <li><a href="#"><img class="pic1" src="/images/youtube_318-183441.avif"> HoneyLand</a></li><br>
+          </ul>
+        </div>
+        <div class="col-md-4">
+          <h4>CONTACT</h4>
+          <p class="f-text"><b>Adress:</b> Timisoara, Romania</p>
+          <p class="f-text"><b>Email:</b> honey_land@gmail.com</p>
+          <p class="f-text"><b>Phone:</b>0734-567-890</p>
+        </div>
+      </div>
+      <hr>
+      <div class="text-center">
+        <p class="f-text">&copy; 2023 SC.HoneyLand.Srl. Toate drepturile rezervate.</p>
+      </div>
+    </div>
+   </footer>
+
+  <script src="contact.js"></script>
+</body>
+</html>

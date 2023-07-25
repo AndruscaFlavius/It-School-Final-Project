@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/store.css">
+    
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-white fixed-top scroll-down">
+          <div class="container-fluid">
+              <h1 class="logo flex-grow-1">Honey Land</h1>
+              
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
+                <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="/Index.html"><b>Home</b></a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link active" href="/Store.html"><b>Store</b></a>
+                  </li>	
+                  <li class="nav-item">
+                    <a class="nav-link active" href="/contact.html"><b>Contact Us</b></a>
+                  </li>
+                </ul>
+              </div>
+               
+    <div class="cart-dropdown">
+      <button class="cart-nav" onclick="toggleCart()"><i class="material-icons">shopping_cart</i></button>
+      <div class="cart-dropdown-content" id="cartItems">
+        <p id="totalAmount"></p>
+      
+  </div>
+  
+  <a href="payment.html?cartData=" + encodeURIComponent(JSON.stringify(cart))>
+    <button class="pay">Pay</button></a>
+  
+
+        </div>
+        <a href="/favorite.html?favorites=" + encodeURIComponent(JSON.stringify(favoriteProducts))>
+          <button class="favorite">
+            <i class="material-icons">favorite</i>
+          </button>
+        </a>
+            </div>
+    <!--Butoanele shop si fav-->
+
+       <ul class="dropdown-menu" id="favoritesMenu"></ul>
+            <div class="search-bar">
+            <input class="search" type="text" id="searchInput" placeholder="Search the product..." oninput="search()">
+               </div>
+           </nav>
+          
+        </header>
+
+      <!--Carduri-->
+     
+
+      <div class="container">
+
+        <div id="searchResult">
+          <div id="searchItems"></div>
+        </div>
+      
+
+      <img class="honey" src="images/Good taste. Good honey. Good life. (1).png">
+
+      <div id="products" class="row">
+
+        <div class="col-sm-3">
+          <div class="card">
+            <img src="/images/img-1.jpg" class="card-img-top imga">
+            <div class="card-body">
+              <h3 class="card-title"> Acacia Honey</h3>
+              <p class="card-text">It is the sweetest of all varieties and has a rich content of vitamins(B1, B2, B6, B12) </p><hr>
+              <p class="price">Acacia Honey (750 g)- 37,99 Lei | Honey Land</p><hr>
+              <button class="card-button" onclick="addToCart('Acacia Honey', 37.99)">Add to cart</button>
+              <button class="favorite" onclick="toggleFavorite(this)" data-name="Acacia Honey" data-price="37.99">
+                <i class="material-icons">favorite</i>
+              </button>
+
+            </div>
+          </div>
+          <img class="inter" src="/images/Good taste. Good honey. Good life. (4).png">
+        </div>
+
+        <div class="col-sm-3">
+        <div class="card">
+          <img src="/images/img-2.jpg" class="card-img-top imga">
+          <div class="card-body">
+          <h3 class="card-title">Manna Honey</h3>
+          <p class="card-text">This type of honey comes from the sweet sap of the leaves and bark of trees </p><hr>
+          <p class="price">Manna Honey (500g) - 24,99 Lei  | Honey Land</p><hr>
+          <button class="card-button" onclick="addToCart('Manna Honey', 24.99)">Add to cart</button>
+          <button class="favorite" onclick="toggleFavorite(this)" data-name="Manna Honey" data-price="24.99">
+                <i class="material-icons">favorite</i>
+              </button>
+
+          </div>
+        </div>
+      </div>
+
+    
+      <div class=" col-sm-3 ">
+        <div class="card">
+          <img src="/images/img-3.jpg" class="card-img-top imga">
+          <div class="card-body">
+          <h3 class="card-title">Manuka Honey</h3>
+          <p class="card-text">It has antibacterial and anti-inflammatory propierties, supports the immune system</p><hr>
+          <p class="price">Manuka Honey (250g)-79,99 Lei | Honey Land</p><hr>
+          <button class="card-button" onclick="addToCart('Manuka', 79.99)">Add to cart</button>
+          <button class="favorite" onclick="toggleFavorite(this)" data-name="Manuka" data-price="79.99">
+            <i class="material-icons">favorite</i>
+          </button>
+
+          </div>
+        </div>
+      </div>
+
+      <div class=" col-sm-3">
+        <div class="card">
+          <img src="/images/img-4.jpg" class="card-img-top imga">
+          <div class="card-body">
+          <h3 class="card-title">Lime Honey</h3>
+          <p class="card-text">Lime honey is rich in vitamin B, Vitamin C, biotin and niacin, it is used as an antibiotic</p><hr>
+          <p class="price">Lime Honey (400g) - 20 lei<br>| Honey Land</p><hr>
+          <button class="card-button" onclick="addToCart('Lime Honey', 20)">Add to cart</button>
+          <button class="favorite" onclick="toggleFavorite(this)" data-name="Lime Honey" data-price="20">
+                <i class="material-icons">favorite</i>
+              </button>
+
+          </div>
+        </div>
+      </div>
+
+      <div class="col-sm-3">
+        <div class="card">
+          <img src="/images/img-5.jpg" class="card-img-top imga">
+          <div class="card-body">
+            <h3 class="card-title">Polyfloral Pollen</h3>
+            <p class="card-text">Some properties: lowers bad cholesterol in the blood, is energetic, nutritious, tonic </p><hr>
+            <p class="price">Polyfloral P(230 g)- 24,99 Lei | Honey Land</p><hr>
+            <button class="card-button" onclick="addToCart('Polyfloral', 24.99)">Add to cart</button>
+            <button class="favorite" onclick="toggleFavorite(this)" data-name="Polyfloral" data-price="24.99">
+              <i class="material-icons">favorite</i>
+            </button>
+
+          </div>
+        </div>
+        <img class="prop" src="/images/Good taste. Good honey. Good life. (6).png">
+      </div>
+
+      <div class="col-sm-3">
+      <div class="card">
+        <img src="/images/img-6.jpg" class="card-img-top imga">
+        <div class="card-body">
+        <h3 class="card-title">Willow Pollen</h3>
+        <p class="card-text">Raw Willow pollen isa protector of joints and vision. It is refreshing and invigorating</p><hr>
+        <p class="price">Willow Pollen (230g) - 28,99 Lei  | Honey Land</p><hr>
+        <button class="card-button" onclick="addToCart('Willow P', 28.99)">Add to cart</button>
+        <button class="favorite" onclick="toggleFavorite(this)" data-name="Willow P" data-price="28.99">
+          <i class="material-icons">favorite</i>
+        </button>
+
+        </div>
+      </div>
+    </div>
+
+  
+    <div class=" col-sm-3 ">
+      <div class="card">
+        <img src="/images/img-7.jpg" class="card-img-top imga">
+        <div class="card-body">
+        <h3 class="card-title">Cherry Pollen</h3>
+        <p class="card-text">Cherry pollen is a natural source of nutrients and antioxidants, guardian of beauty and vitality</p><hr>
+        <p class="price">Cherry Pollen(230g)-25,99 Lei | Honey Land</p><hr>
+        <button class="card-button" onclick="addToCart('Cherry Pollen', 25.99)">Add to cart</button>
+        <button class="favorite" onclick="toggleFavorite(this)" data-name="Cherry Pollen" data-price="25.99">
+          <i class="material-icons">favorite</i>
+        </button>
+
+        </div>
+      </div>
+    </div>
+
+    <div class=" col-sm-3">
+      <div class="card">
+        <img src="/images/img-8.jpg" class="card-img-top imga">
+        <div class="card-body">
+        <h3 class="card-title">Pine Pollen</h3>
+        <p class="card-text">Regulates the functions of the gastrointestinal tract, helps with constipation.
+         </p><hr>
+        <p class="price">Pine Pollen (230g) - 27 lei<br>| Honey Land</p><hr>
+        <button class="card-button" onclick="addToCart('Pine Pollen', 27)">Add to cart</button>
+        <button class="favorite" onclick="toggleFavorite(this)" data-name="Pine Pollen" data-price="27">
+          <i class="material-icons">favorite</i>
+        </button>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="col-sm-3">
+        
+      <div class="card">
+        <img src="/images/img-9(4).jpg" class="card-img-top imga">
+        <div class="card-body">
+          <h3 class="card-title">Raw Propolis</h3>
+          <p class="card-text">Raw propolis is known as the strongest natural antibiotic, being a good ally against viruses </p><hr>
+          <p class="price">Raw Propolis(100 g)- 100 Lei<br> | Honey Land</p><hr>
+          <button class="card-button" onclick="addToCart('Raw Propolis', 100)">Add to cart</button>
+          <button class="favorite" onclick="toggleFavorite(this)" data-name="Raw Propolis" data-price="100">
+            <i class="material-icons">favorite</i>
+          </button>
+
+        </div>
+      </div>
+      <img class="inter" src="/images/Good taste. Good honey. Good life. (7).png">
+    </div>
+
+    <div class="col-sm-3">
+    <div class="card">
+      <img src="/images/img-10.jpg" class="card-img-top imga">
+      <div class="card-body">
+      <h3 class="card-title">Propolis Tincture</h3>
+      <p class="card-text">Regenerates tissue, accelerates wound healing, prevents infections, supports skin health.</p><hr>
+      <p class="price">Propolis Tincture (30 ml) - 25 Lei  | Honey Land</p><hr>
+      <button class="card-button" onclick="addToCart('P. Tincture', 25)">Add to cart</button>
+      <button class="favorite" onclick="toggleFavorite(this)" data-name="P. Tincture" data-price="25">
+        <i class="material-icons">favorite</i>
+      </button>
+
+      </div>
+    </div>
+  </div>
+
+
+  <div class=" col-sm-3 ">
+    <div class="card">
+      <img src="/images/img-11.jpg" class="card-img-top imga">
+      <div class="card-body">
+      <h3 class="card-title">Dark Propolis</h3>
+      <p class="card-text">Can be green, brown or black. It is soluble in alcohol and ether and sparingly soluble in water.</p><hr>
+      <p class="price">Dark Propolis(100g)-100 Lei | Honey Land</p><hr>
+      <button class="card-button" onclick="addToCart('Dark Propolis', 100)">Add to cart</button>
+      <button class="favorite" onclick="toggleFavorite(this)" data-name="Dark Tincture" data-price="100">
+        <i class="material-icons">favorite</i>
+      </button>
+
+      </div>
+    </div>
+  </div>
+
+  <div class=" col-sm-3">
+    <div class="card">
+      <img src="/images/img-12(3).jpg" class="card-img-top imga">
+      <div class="card-body">
+      <h3 class="card-title">Red P. Tincture</h3>
+      <p class="card-text">The most interesting quality is its preventive and therapeutic use in pancreatic cancer</p><hr>
+      <p class="price">Red P. Tincture (30g) - 28 lei<br>| Honey Land</p><hr>
+      <button class="card-button" onclick="addToCart('Red P. Tincture', 28)">Add to cart</button>
+      <button class="favorite" onclick="toggleFavorite(this)" data-name="Red P. Tincture" data-price="28">
+        <i class="material-icons">favorite</i>
+      </button>
+
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-3">
+        
+    <div class="card">
+      <img src="/images/img-13.jpg" class="card-img-top imga">
+      <div class="card-body">
+        <h3 class="card-title">Promo:<br>Honey with Propolis</h3>
+        <p class="card-text">Three jars of willow honey with propolis (250 g/ jar). For more sweet moments!</p><hr>
+        <p class="price">Honey (3x250 g)- 69,99 Lei | Honey Land</p><hr>
+        <button class="card-button" onclick="addToCart('Promo Honey/Polen', 69.99)">Add to cart</button>
+        <button class="favorite" onclick="toggleFavorite(this)" data-name="Promo Honey/Polen" data-price="69.99">
+          <i class="material-icons">favorite</i>
+        </button>
+      </div>
+    </div>
+   
+  </div>
+
+  <div class="col-sm-3">
+  <div class="card">
+    <img src="/images/img-14.jpg" class="card-img-top imga">
+    <div class="card-body">
+    <h3 class="card-title">Promo: <br> 1+1 Free</h3>
+    <p class="card-text"> When you buy a jar of polyflora honey (400g), you get one free (300g)</p><hr>
+    <p class="price">Polyflora Honey (1+1 free) - 28,99 Lei  | Honey Land</p><hr>
+    <button class="card-button" onclick="addToCart('1+1 Polyfloral', 28.99)">Add to cart</button>
+    <button class="favorite" onclick="toggleFavorite(this)" data-name="1+1 Polyfloral" data-price="28.99">
+      <i class="material-icons">favorite</i>
+    </button>
+    </div>
+  </div>
+</div>
+
+
+<div class=" col-sm-3 ">
+  <div class="card">
+    <img src="/images/img-15.jpg" class="card-img-top imga">
+    <div class="card-body">
+    <h3 class="card-title">Promo:<br>Poly-Honey</h3>
+    <p class="card-text">Try all our flavors by buying the Poly-Honey package (5x100g/jar)</p><hr>
+    <p class="price">Poly-Honey(5x100g/jar)-44 Lei | Honey Land</p><hr>
+    <button class="card-button" onclick="addToCart('Poly-Honey', 44)">Add to cart</button>
+
+    <button class="favorite" onclick="toggleFavorite(this)" data-name="Poly-Honey" data-price="44">
+      <i class="material-icons">favorite</i>
+    </button>
+    </div>
+  </div>
+</div>
+
+<div class=" col-sm-3">
+  <div class="card">
+    <img src="/images/img-16(4).jpg" class="card-img-top imga">
+    <div class="card-body">
+    <h3 class="card-title">New: <br>Honeycomb </h3>
+    <p class="card-text">The honeycomb can replace any dessert, it has a soft texture and comes in a jar with acacia honey
+     </p><hr>
+    <p class="price">Honeycomb (900g) - 48 lei | Honey Land</p><hr>
+    <button class="card-button" onclick="addToCart('honeycomb', 27)">Add to cart</button>
+    
+    <button class="favorite" onclick="toggleFavorite(this)" data-name="Honeycomb" data-price="27">
+      <i class="material-icons">favorite</i>
+    </button>
+    </div>
+  </div>
+</div>
+  
+    </div>
+
+    <img class="testimoniale" src="/images/Premium product (3).png">
+   <!--Testimoniale-->   
+
+   <div class="row">
+<div class="col-sm-3">
+     <div id="testimonial-container">
+       <div class="testimonial-card">
+         <div class="testimonial-header">
+           <h3 class="name">Filca<br> Marta</h3>
+         </div>
+         <div class="testimonial-body">
+           <img class="photo" src="/images/t1.jpg" alt="Poza">
+           <p class="text">Propolis has been a real help to our family's immunity throughout the year </p>
+         </div>
+         <div class="testimonial-footer">
+           <p class="author">Honey Land</p>
+         </div>
+       </div>
+     </div>
+</div>
+
+<div class="col-sm-3">
+     <div id="testimonial-container">
+      <div class="testimonial-card">
+        <div class="testimonial-header">
+          <h3 class="name">Petcu<br>Raisa</h3>
+        </div>
+        <div class="testimonial-body">
+          <img class="photo" src="/images/test2.jpg" alt="Poza">
+          <p class="text">Mierea voastra de salcam e preferata mea, aproape ca nu exista mic de jun fara ea</p>
+        </div>
+        <div class="testimonial-footer">
+          <p class="author">Honey Land</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-sm-3">
+    <div id="testimonial-container">
+      <div class="testimonial-card">
+        <div class="testimonial-header">
+          <h3 class="name">Popescu<br> Maria</h3>
+        </div>
+        <div class="testimonial-body">
+          <img class="photo" src="/images/test3.jpg" alt="Poza">
+          <p class="text">Propolis has been a real help to our family's immunity throughout the year</p>
+        </div>
+        <div class="testimonial-footer">
+          <p class="author">Honey Land</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-sm-3">
+    <div id="testimonial-container">
+      <div class="testimonial-card">
+        <div class="testimonial-header">
+          <h3 class="name">Andrusca Flavius</h3>
+        </div>
+        <div class="testimonial-body">
+          <img class="photo" src="images/download.jpg" alt="Poza">
+          <p class="text">Mierea voastra de salcam e preferata mea, aproape ca nu exista mic de jun fara ea</p>
+        </div>
+        <div class="testimonial-footer">
+          <p class="author">Honey Land</p>
+        </div>
+      </div>
+    </div>
+    </div>
+   </div>
+
+   <!--Footer-->
+
+   <footer class="footer2">
+  
+    <div class="container4">
+      <div class="row ">
+        <div class="col-md-4">
+          <h4>ABOUT US</h4>
+          <p class="f-text"> SC.HoneyLand.Srl was born in 2023 in Timis country, Romania. We are big lovers of honey and quality bee products,
+            so we decided to share our passion with you. This is the place where you can find different be products, from honey to propolis.
+            All our products are BIO and help you keep your health and energy in the most natural way!<br>
+            Honey Land can be found on all social networks, as well as on Youtube, where we regulary post videos of our work.
+          </p>
+        </div>
+        <div class="col-md-4">
+          <h4>SOCIAL MEDIA</h4>
+          <ul class="list-unstyled">
+            <li><a href="#"><img class="pic" src="/images/instagram.webp">@Honey_Land</a></li><br>
+            <li><a href="#"><img class="pic" src="/images/facebook.png">HoneyLand</a></li><br>
+            <li><a href="#"><img class="pic1" src="/images/Logo_of_Twitter.svg.png">@Honey_Land</a></li><br>
+            <li><a href="#"><img class="pic1" src="/images/youtube_318-183441.avif"> HoneyLand</a></li><br>
+          </ul>
+        </div>
+        <div class="col-md-4">
+          <h4>CONTACT</h4>
+          <p class="f-text"><b>Adress:</b> Timisoara, Romania</p>
+          <p class="f-text"><b>Email:</b> honey_land@gmail.com</p>
+          <p class="f-text"><b>Phone:</b>0734-567-890</p>
+        </div>
+      </div>
+      <hr>
+      <div class="text-center">
+        <p class="f-text">&copy; 2023 SC.HoneyLand.Srl. Toate drepturile rezervate.</p>
+      </div>
+    </div>
+    
+  </footer>
+
+<script src="store.js"></script>
+</body>
+</html>

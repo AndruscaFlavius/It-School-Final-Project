@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Project</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+
+<!--Aici incepe sectiunea Nav-bar-->
+
+  <header>
+    <nav class="navbar navbar-expand-sm navbar-light  sticky-top scroll-down">
+      <div class="container-fluid">
+          <h1 class="logo">Honey Land</h1>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="/Index.html"><b>Home</b></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="/Store.html"><b>Store</b></a>
+              </li>	
+              <li class="nav-item">
+                <a class="nav-link active" href="/contact.html"><b>Contact Us</b></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        
+<!--Butoanele shop si fav-->
+      
+      
+        
+       
+
+        
+  <a href="payment.html?cartData=" + encodeURIComponent(JSON.stringify(cart))>
+    <button class="pay">Pay</button></a>
+  
+    <a class="fav" href="/favorite.html?favorites=" + encodeURIComponent(JSON.stringify(favoriteProducts))>
+      <button class="favorite">
+        <i class="material-icons">favorite</i>
+      </button>
+    </a>
+
+    </nav>
+
+      <h1 class="brand-name"><b>Welcome To  <br> Honey Land!</b></h1>
+      <h4 class="h4-text">- Here happens the magic -</h4>
+    </header>
+
+    <h1 class="step1"><b> Fresh honey only</b></h1>
+
+    <!--Aici incepe Carousel-->
+   
+<din class="container1">
+    <div id="myCarousel" class="carousel slide carousel-p" data-ride="carousel">
+      <ol class="carousel-indicators">
+          <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+          <li data-target="#myCarousel" data-slide-to="1"></li>
+      </ol>
+      <div class="carousel-inner">
+          <div class="carousel-item active">
+              <div class="container">
+                  <div class="row">
+                      <div class="col-md-4">
+                          <div class="card">
+                              <img class="card-img-top" src="./images/tipuri-miere.jpg" alt="Image 1">
+                              <div class="card-body">
+                                  <h5 class="card-title">Honey</h5>
+                                  <p class="card-text">There are over 10 types of honey used both for taste and therapeutic purposes.</p>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="col-md-4">
+                          <div class="card">
+                              <img class="card-img-top" src="./images/polenul.jpg" alt="Image 2">
+                              <div class="card-body">
+                                  <h5 class="card-title">The pollen</h5>
+                                  <p class="card-text">Pollen  is used in apitherapeutic treatment and facilitates the healing process of wounds.</p>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="col-md-4">
+                          <div class="card">
+                              <img class="card-img-top" src="./images/propolis.jpg" alt="Image 3">
+                              <div class="card-body">
+                                  <h5 class="card-title">Propolis</h5>
+                                  <p class="card-text">Has the quality of an antimicrobial barrier. It may also contain essential oils, vitamins.</p>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          
+          <div class="carousel-item">
+              <div class="container">
+                  <div class="row">
+                      <div class="col-md-4">
+                          <div class="card">
+                              <img class="card-img-top" src="/images/manuka.jpg" alt="Image 4">
+                              <div class="card-body">
+                                  <h5 class="card-title">Manuka honey</h5>
+                                  <p class="card-text">Manuka honey is an unusual honey due to its, antioxidant, anti-inflammatory properties.</p>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="col-md-4">
+                          <div class="card">
+                              <img class="card-img-top" src="./images/mana.jpg" alt="Image 5">
+                              <div class="card-body">
+                                  <h5 class="card-title">Manna honey</h5>
+                                  <p class="card-text">It is rich in calcium and magnesiun, salts assimilated much better by the body naturally.</p>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="col-md-4">
+                          <div class="card">
+                              <img class="card-img-top" src="./images/miere de salcam.jpg" alt="Image 6">
+                              <div class="card-body">
+                                  <h5 class="card-title">Acacia honey</h5>
+                                  <p class="card-text">Acacia honey has a high fructose content, for this reason it is more smooth and delicious.</p>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+      <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+      </a>
+      <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+      </a>
+      
+      </div> 
+    <img class="banner-c" src="images/Untitled design (11).png">
+   
+<!--Aici incepe sectiunea Card-->
+
+
+<div class="container">
+  <div class="carduri-c">
+    <div class="row">
+
+      <!--Card 1-->
+      <div class="col-sm-6 col-md-3">
+        <div class="card card1">
+          <img src="./images/img-2.jpg" class="card-img-top same" alt="Image 1">
+          <div class="card-body">
+            <h5 class="card-title">Manna Honey</h5><hr>
+      <p class="card-text">Manna Honey (500g)- 24,99 Lei | Honey Land</p><hr>
+<!--Favorite si shop-->
+            <div>
+            <a href="/Store.html" class="btn view">See more!</a>
+           
+            </div>
+          </div>
+        </div>
+      </div>
+
+     <!--Card2-->
+      <div class="col-sm-6 col-md-3">
+        <div class="card card1">
+          <img src="./images/img-6.jpg" class="card-img-top same" alt="Image 2">
+          <div class="card-body">
+            <h5 class="card-title">Willow Pollen</h5><hr>
+            <p class="card-text">Willow Pollen (230g) - 28,99 Lei  | Honey Land</p><hr>
+<!--Favorite si shop-->
+            <div>
+            <a href="/Store.html" class="btn view">See more!</a>
+            
+            </div>
+          </div>
+        </div>
+      </div>
+
+    <!--Card3-->
+      <div class="col-sm-6 col-md-3">
+        <div class="card card1">
+          <img src="/images/img-11.jpg" class="card-img-top same" alt="Image 3">
+          <div class="card-body">
+            <h5 class="card-title">Dark Propolis</h5><hr>
+            <p class="card-text">Dark Propolis (100g)-100 Lei | Honey Land</p><hr>
+<!--Favorite si shop-->
+           <div>
+            <a href="/Store.html" class="btn view">See more!</a>
+            
+           </div>
+          </div>
+        </div>
+      </div>
+
+    <!--Card4-->
+      <div class="col-sm-6 col-md-3">
+        <div class="card card1">
+          <img src="/images/img-4.jpg" class="card-img-top same" alt="Image 4">
+          <div class="card-body">
+            <h5 class="card-title">Lime Honey </h5><hr>
+            <p class="card-text">Lime Honey (400g) - 20 Lei <br>| Honey Land</p><hr>
+<!--Favorite si shop-->
+            <div>
+            <a href="/Store.html" class="btn view">See more!</a>
+           
+          </div>
+        </div>
+      </div>
+    </div>
+   </div>
+</div>
+
+<img  class="banner-f" src="/images/Untitled design (13).png">
+
+<!--Aici incepe sectiunea footer-->
+
+<footer class="footer2">
+   <div class="container4">
+    <div class="row ">
+      <div class="col-md-4">
+        <h4>ABOUT US</h4>
+        <p class="f-text"> SC.HoneyLand.Srl was born in 2023 in Timis country, Romania. We are big lovers of honey and quality bee products,
+          so we decided to share our passion with you. This is the place where you can find different be products, from honey to propolis.
+          All our products are BIO and help you keep your health and energy in the most natural way!<br>
+          Honey Land can be found on all social networks, as well as on Youtube, where we regulary post videos of our work.
+        </p>
+      </div>
+      <div class="col-md-4">
+        <h4>SOCIAL MEDIA</h4>
+        <ul class="list-unstyled">
+          <li><a href="#"><img class="pic" src="/images/instagram.webp">@Honey_Land</a></li><br>
+          <li><a href="#"><img class="pic" src="/images/facebook.png">HoneyLand</a></li><br>
+          <li><a href="#"><img class="pic1" src="/images/Logo_of_Twitter.svg.png">@Honey_Land</a></li><br>
+          <li><a href="#"><img class="pic1" src="/images/youtube_318-183441.avif"> HoneyLand</a></li><br>
+        </ul>
+      </div>
+      <div class="col-md-4">
+        <h4>CONTACT</h4>
+        <p class="f-text"><b>Adress:</b> Timisoara, Romania</p>
+        <p class="f-text"><b>Email:</b> honey_land@gmail.com</p>
+        <p class="f-text"><b>Phone:</b>0734-567-890</p>
+      </div>
+    </div>
+    <hr>
+    <div class="text-center">
+      <p class="f-text">&copy; 2023 SC.HoneyLand.Srl. Toate drepturile rezervate.</p>
+    </div>
+  </div>
+  
+</footer>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script>
+    $('.carousel').carousel();
+</script>
+
+<script src="index.js"></script>
+</body>
+</html>

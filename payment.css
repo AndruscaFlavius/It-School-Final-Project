@@ -1,0 +1,98 @@
+/*Navabr*/
+.logo {
+  font-family: "sofia", sans-serif;
+  margin-left: 100px;
+  color: rgb(190, 148, 69);
+  height: 40px;
+}
+
+.navbar-nav > li > a:hover {
+  font-size: 15px;
+}
+
+.active {
+  color: rgb(47, 196, 84) !important;
+}
+
+.nav-link {
+  font-family: "Times New Roman", Times, serif;
+  font-size: 17px;
+  font-weight: 100;
+}
+
+.navbar-nav li {
+  padding: 0px 25px 0px 25px;
+}
+
+.navbar-nav {
+  margin-right: 80px;
+}
+
+.hidden-spacer {
+  height: 56px;
+}
+
+.navbar {
+  margin: 20px 150px 20px 150px;
+  border-radius: 20px;
+  box-shadow: 0px 0px 20px 0px rgb(151, 109, 31);
+}
+
+.container1 {
+  text-align: center;
+  height: 740px;
+  background-size: cover;
+  background-image: url("./images/Untitled\ design\ \(20\).png");
+  margin-right: 20px;
+}
+
+/*Formular de plata*/
+
+.title {
+  margin-top: 100px;
+  font-family: "Sofia", sans-serif;
+  color: rgb(190, 148, 69);
+  margin-bottom: 30px;
+}
+.numar {
+  font-size: 20px;
+  font-family: "Times New Roman", Times, serif;
+  color: rgb(151, 109, 31);
+}
+
+.finish {
+  margin-top: 40px;
+  border: none;
+  background-color: rgb(190, 148, 69);
+  font-family: "Times New Roman", Times, serif;
+  font-size: 20px;
+  border-radius: 20px;
+  color: white;
+}
+
+/*footer*/
+
+.footer2 {
+  margin-top: 100px;
+}
+.pic {
+  height: 30px;
+}
+.pic1 {
+  height: 25px;
+}
+
+h4 {
+  font-family: "Times New Roman", Times, serif;
+  color: rgb(151, 109, 31);
+}
+.f-text {
+  font-family: "Times New Roman", Times, serif;
+  font-weight: 100px;
+  color: rgb(190, 148, 69);
+}
+
+hr {
+  border: none;
+  border-top: 2px solid rgb(151, 109, 31);
+}

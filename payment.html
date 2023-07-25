@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pagina de plată</title>
+  <!--Link pentru font-->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
+  <!--Link pentru bootstrap-->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <!--Link pagina css-->
+  <link rel="stylesheet" href="payment.css">
+</head>
+
+<body>
+
+  <header>
+    <nav class="navbar navbar-expand-sm ">
+      <div class="container-fluid">
+          <h1 class="logo">Honey Land</h1>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="/Index.html"><b>Home</b></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="/Store.html"><b>Store</b></a>
+              </li>	
+              <li class="nav-item">
+                <a class="nav-link active" href="/contact.html"><b>Contact Us</b></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+ </header>
+
+<!--Formular de plata-->
+
+<div class="container1">
+  <h1 class="title">Pay your products:</h1>
+  <div  id="cartDetails"></div>
+
+<form id="paymentForm">
+  <label class="numar" for="cardNumber"><b>Card Number:</b></label><br>
+  <input type="text" id="cardNumber" required pattern="[0-9]{10}" title="Introduceți un număr de 10 cifre">
+  <br>
+  
+  <label class="numar" for="ccv"><b>CCV :</b></label><br>
+  <input type="text" id="ccv" required pattern="[0-9]{3}" title="Introduceți un număr de 3 cifre">
+  
+  <br>
+  <label class="numar" for="name"><b>Name :</b></label><br>
+  <input type="text" id="name" required pattern="[A-Za-z]{5,20}" title="Introduceți un nume de 5-20 caractere, fără numere">
+  <br>
+
+  <label class="numar" for="email"><b>E-mail adress :</b></label><br>
+  <input type="email" id="email" required pattern="^[a-zA-Z0-9._%+-]+@(yahoo\.com|gmail\.com)$" title="Introduceți o adresă de e-mail validă (yahoo.com sau gmail.com)">
+  <br>
+
+  <!-- Butonul de finalizare a plății -->
+  <button class="finish" type="button" id="finalizeButton" onclick="finalizePayment()">Complete the payment</button>
+  </ul>
+</form>
+
+<!-- Elementul pentru afișarea mesajului de mulțumire -->
+<div id="messageContainer"></div>
+
+</div>
+
+<!--Footer-->
+<div class="container">
+<footer class="footer2">
+  
+  <div class="container4">
+    <div class="row ">
+      <div class="col-md-4">
+        <h4>ABOUT US</h4>
+        <p class="f-text"> SC.HoneyLand.Srl was born in 2023 in Timis country, Romania. We are big lovers of honey and quality bee products,
+          so we decided to share our passion with you. This is the place where you can find different be products, from honey to propolis.
+          All our products are BIO and help you keep your health and energy in the most natural way!<br>
+          Honey Land can be found on all social networks, as well as on Youtube, where we regulary post videos of our work.
+        </p>
+      </div>
+      <div class="col-md-4">
+        <h4>SOCIAL MEDIA</h4>
+        <ul class="list-unstyled">
+          <li><a href="#"><img class="pic" src="/images/instagram.webp">@Honey_Land</a></li><br>
+          <li><a href="#"><img class="pic" src="/images/facebook.png">HoneyLand</a></li><br>
+          <li><a href="#"><img class="pic1" src="/images/Logo_of_Twitter.svg.png">@Honey_Land</a></li><br>
+          <li><a href="#"><img class="pic1" src="/images/youtube_318-183441.avif"> HoneyLand</a></li><br>
+        </ul>
+      </div>
+      <div class="col-md-4">
+        <h4>CONTACT</h4>
+        <p class="f-text"><b>Adress:</b> Timisoara, Romania</p>
+        <p class="f-text"><b>Email:</b> honey_land@gmail.com</p>
+        <p class="f-text"><b>Phone:</b>0734-567-890</p>
+      </div>
+    </div>
+    <hr>
+    <div class="text-center">
+      <p class="f-text">&copy; 2023 SC.HoneyLand.Srl. Toate drepturile rezervate.</p>
+    </div>
+  </div>
+  
+</footer>
+
+  <script src="payment.js"></script>
+</body>
+
