@@ -14,7 +14,7 @@
 </head>
 
 <body>
-
+<!--Navbar-->
   <header>
     <nav class="navbar navbar-expand-sm ">
       <div class="container-fluid">
@@ -42,9 +42,10 @@
 <!--Formular de plata-->
 
 <div class="container1">
+  <div class="container2">
   <h1 class="title">Pay your products:</h1>
   <div  id="cartDetails"></div>
-
+</div>
 <form id="paymentForm">
   <label class="numar" for="cardNumber"><b>Card Number:</b></label><br>
   <input type="text" id="cardNumber" required pattern="[0-9]{10}" title="Introduceți un număr de 10 cifre">
@@ -59,7 +60,7 @@
   <br>
 
   <label class="numar" for="email"><b>E-mail adress :</b></label><br>
-  <input type="email" id="email" required pattern="^[a-zA-Z0-9._%+-]+@(yahoo\.com|gmail\.com)$" title="Introduceți o adresă de e-mail validă (yahoo.com sau gmail.com)">
+  <input type="email" id="email" required pattern="@(yahoo\.com|gmail\.com)$" title="Introduceți o adresă de e-mail validă (yahoo.com sau gmail.com)">
   <br>
 
   <!-- Butonul de finalizare a plății -->

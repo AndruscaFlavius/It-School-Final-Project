@@ -35,26 +35,31 @@
                   </li>
                 </ul>
               </div>
-               
+      
+    <!--Aici se afiseaza produsele in cos-->
+
     <div class="cart-dropdown">
       <button class="cart-nav" onclick="toggleCart()"><i class="material-icons">shopping_cart</i></button>
       <div class="cart-dropdown-content" id="cartItems">
         <p id="totalAmount"></p>
-      
-  </div>
-  
+      </div>
+
+     <!--Aici e butonul care duce la pagina de plata-->  
+
   <a href="payment.html?cartData=" + encodeURIComponent(JSON.stringify(cart))>
     <button class="pay">Pay</button></a>
-  
+    </div>
 
-        </div>
+     <!--Aici e butonul care duce la pagina de favorite-->
+
         <a href="/favorite.html?favorites=" + encodeURIComponent(JSON.stringify(favoriteProducts))>
           <button class="favorite">
             <i class="material-icons">favorite</i>
           </button>
         </a>
-            </div>
-    <!--Butoanele shop si fav-->
+       </div>
+
+    <!--Bara de cautare-->
 
        <ul class="dropdown-menu" id="favoritesMenu"></ul>
             <div class="search-bar">
@@ -64,10 +69,11 @@
           
         </header>
 
-      <!--Carduri-->
-     
+    <!--Aici incepe sectiunea cardurilor-->
 
       <div class="container">
+
+    <!--Aici e locul unde se afiseaza produsele cautate -->
 
         <div id="searchResult">
           <div id="searchItems"></div>
@@ -78,10 +84,11 @@
 
       <div id="products" class="row">
 
+        <!--Cardul 1-->
         <div class="col-sm-3">
           <div class="card">
-            <img src="/images/img-1.jpg" class="card-img-top imga">
-            <div class="card-body">
+              <img src="/images/img-1.jpg" class="card-img-top imga">
+              <div class="card-body">
               <h3 class="card-title"> Acacia Honey</h3>
               <p class="card-text">It is the sweetest of all varieties and has a rich content of vitamins(B1, B2, B6, B12) </p><hr>
               <p class="price">Acacia Honey (750 g)- 37,99 Lei | Honey Land</p><hr>
@@ -89,12 +96,12 @@
               <button class="favorite" onclick="toggleFavorite(this)" data-name="Acacia Honey" data-price="37.99">
                 <i class="material-icons">favorite</i>
               </button>
-
-            </div>
+              </div>
           </div>
           <img class="inter" src="/images/Good taste. Good honey. Good life. (4).png">
         </div>
 
+        <!--Cardul 2-->
         <div class="col-sm-3">
         <div class="card">
           <img src="/images/img-2.jpg" class="card-img-top imga">
@@ -105,13 +112,12 @@
           <button class="card-button" onclick="addToCart('Manna Honey', 24.99)">Add to cart</button>
           <button class="favorite" onclick="toggleFavorite(this)" data-name="Manna Honey" data-price="24.99">
                 <i class="material-icons">favorite</i>
-              </button>
-
+          </button>
           </div>
         </div>
-      </div>
+       </div>
 
-    
+       <!--Cardul 3-->
       <div class=" col-sm-3 ">
         <div class="card">
           <img src="/images/img-3.jpg" class="card-img-top imga">
@@ -123,11 +129,11 @@
           <button class="favorite" onclick="toggleFavorite(this)" data-name="Manuka" data-price="79.99">
             <i class="material-icons">favorite</i>
           </button>
-
           </div>
         </div>
       </div>
 
+      <!--Cardul 4-->
       <div class=" col-sm-3">
         <div class="card">
           <img src="/images/img-4.jpg" class="card-img-top imga">
@@ -138,12 +144,12 @@
           <button class="card-button" onclick="addToCart('Lime Honey', 20)">Add to cart</button>
           <button class="favorite" onclick="toggleFavorite(this)" data-name="Lime Honey" data-price="20">
                 <i class="material-icons">favorite</i>
-              </button>
-
+          </button>
           </div>
         </div>
       </div>
 
+      <!--Card 5-->
       <div class="col-sm-3">
         <div class="card">
           <img src="/images/img-5.jpg" class="card-img-top imga">
@@ -155,12 +161,12 @@
             <button class="favorite" onclick="toggleFavorite(this)" data-name="Polyfloral" data-price="24.99">
               <i class="material-icons">favorite</i>
             </button>
-
-          </div>
+            </div>
         </div>
         <img class="prop" src="/images/Good taste. Good honey. Good life. (6).png">
       </div>
 
+      <!--Card 6-->
       <div class="col-sm-3">
       <div class="card">
         <img src="/images/img-6.jpg" class="card-img-top imga">
@@ -171,13 +177,12 @@
         <button class="card-button" onclick="addToCart('Willow P', 28.99)">Add to cart</button>
         <button class="favorite" onclick="toggleFavorite(this)" data-name="Willow P" data-price="28.99">
           <i class="material-icons">favorite</i>
-        </button>
-
+        </butto>
         </div>
       </div>
     </div>
 
-  
+     <!--Card 7-->
     <div class=" col-sm-3 ">
       <div class="card">
         <img src="/images/img-7.jpg" class="card-img-top imga">
@@ -189,11 +194,11 @@
         <button class="favorite" onclick="toggleFavorite(this)" data-name="Cherry Pollen" data-price="25.99">
           <i class="material-icons">favorite</i>
         </button>
-
         </div>
       </div>
     </div>
 
+    <!--Card 8-->
     <div class=" col-sm-3">
       <div class="card">
         <img src="/images/img-8.jpg" class="card-img-top imga">
@@ -206,13 +211,12 @@
         <button class="favorite" onclick="toggleFavorite(this)" data-name="Pine Pollen" data-price="27">
           <i class="material-icons">favorite</i>
         </button>
-
         </div>
       </div>
     </div>
 
+    <!--Card 8-->
     <div class="col-sm-3">
-        
       <div class="card">
         <img src="/images/img-9(4).jpg" class="card-img-top imga">
         <div class="card-body">
@@ -223,12 +227,12 @@
           <button class="favorite" onclick="toggleFavorite(this)" data-name="Raw Propolis" data-price="100">
             <i class="material-icons">favorite</i>
           </button>
-
-        </div>
+         </div>
       </div>
       <img class="inter" src="/images/Good taste. Good honey. Good life. (7).png">
     </div>
 
+     <!--Card 9-->
     <div class="col-sm-3">
     <div class="card">
       <img src="/images/img-10.jpg" class="card-img-top imga">
@@ -240,12 +244,11 @@
       <button class="favorite" onclick="toggleFavorite(this)" data-name="P. Tincture" data-price="25">
         <i class="material-icons">favorite</i>
       </button>
-
       </div>
     </div>
   </div>
 
-
+    <!--Card 10-->
   <div class=" col-sm-3 ">
     <div class="card">
       <img src="/images/img-11.jpg" class="card-img-top imga">
@@ -257,11 +260,11 @@
       <button class="favorite" onclick="toggleFavorite(this)" data-name="Dark Tincture" data-price="100">
         <i class="material-icons">favorite</i>
       </button>
-
-      </div>
+    </div>
     </div>
   </div>
 
+   <!--Card 11-->
   <div class=" col-sm-3">
     <div class="card">
       <img src="/images/img-12(3).jpg" class="card-img-top imga">
@@ -273,12 +276,12 @@
       <button class="favorite" onclick="toggleFavorite(this)" data-name="Red P. Tincture" data-price="28">
         <i class="material-icons">favorite</i>
       </button>
-
       </div>
     </div>
   </div>
   <div class="col-sm-3">
-        
+
+   <!--Card 12-->
     <div class="card">
       <img src="/images/img-13.jpg" class="card-img-top imga">
       <div class="card-body">
@@ -291,9 +294,9 @@
         </button>
       </div>
     </div>
-   
-  </div>
+   </div>
 
+   <!--Card 13-->
   <div class="col-sm-3">
   <div class="card">
     <img src="/images/img-14.jpg" class="card-img-top imga">
@@ -309,7 +312,7 @@
   </div>
 </div>
 
-
+    <!--Card 14-->
 <div class=" col-sm-3 ">
   <div class="card">
     <img src="/images/img-15.jpg" class="card-img-top imga">
@@ -318,7 +321,6 @@
     <p class="card-text">Try all our flavors by buying the Poly-Honey package (5x100g/jar)</p><hr>
     <p class="price">Poly-Honey(5x100g/jar)-44 Lei | Honey Land</p><hr>
     <button class="card-button" onclick="addToCart('Poly-Honey', 44)">Add to cart</button>
-
     <button class="favorite" onclick="toggleFavorite(this)" data-name="Poly-Honey" data-price="44">
       <i class="material-icons">favorite</i>
     </button>
@@ -326,6 +328,7 @@
   </div>
 </div>
 
+ <!--Card 15-->
 <div class=" col-sm-3">
   <div class="card">
     <img src="/images/img-16(4).jpg" class="card-img-top imga">
@@ -335,17 +338,16 @@
      </p><hr>
     <p class="price">Honeycomb (900g) - 48 lei | Honey Land</p><hr>
     <button class="card-button" onclick="addToCart('honeycomb', 27)">Add to cart</button>
-    
     <button class="favorite" onclick="toggleFavorite(this)" data-name="Honeycomb" data-price="27">
       <i class="material-icons">favorite</i>
     </button>
     </div>
   </div>
 </div>
-  
-    </div>
+   </div>
 
     <img class="testimoniale" src="/images/Premium product (3).png">
+    
    <!--Testimoniale-->   
 
    <div class="row">

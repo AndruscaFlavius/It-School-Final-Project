@@ -13,17 +13,17 @@ function displayCartDetails(cart) {
   for (var i = 0; i < cart.length; i++) {//parcurgem produsele din cos 
     var item = cart[i];
     content +=
-      "<p>" +
+      "<p class='cart-item'>" +
       item.name +
       " - Lei" +
       item.price +
-      " <button onclick='removeFromCart(" +
+      " <button class='remove-button' onclick='removeFromCart(" +
       i +
-      ")'>Șterge</button></p>"; //continutul cosului nume+pret+total+butonul de stergere 
+      ")'>Remove</button></p>"; //continutul cosului nume+pret+total+butonul de stergere 
     total += item.price;
   }
 
-  content += "<p><strong>Total: Lei" + total + "</strong></p>";
+  content += "<p class='cart-total'><strong>Total: Lei" + total + "</strong></p>";
   cartDetailsElement.innerHTML = content;
 
   var totalAmountElement = document.getElementById("totalAmount");
@@ -47,7 +47,7 @@ function finalizePayment() {
   var email = document.getElementById("email").value;
   var name = document.getElementById("name").value;
 
-  var cardNumberRegex = /^[0-9]{10}$/;
+  var cardNumberRegex = /^[0-9]{10}$/;//am folosit regex pentru verificare
   var ccvRegex = /^[0-9]{3}$/;
   var emailRegex = /^[a-zA-Z0-9._%+-]+@(yahoo\.com|gmail\.com)$/;
   var nameRegex = /^[A-Za-z]{5,20}$/;

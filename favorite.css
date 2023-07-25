@@ -55,6 +55,8 @@
     
 
   }
+
+  
 .list{
     margin-top: 20px;
     margin-bottom: 20px;
@@ -99,3 +101,34 @@
     border-top: 2px solid rgb(151, 109, 31);
   }
   
+   /* Stilul pentru produse */
+   .favorite-product {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    color: green;
+  }
+
+  /* Stilul pentru butonul de remove */
+  .remove-button {
+    background-color:rgb(151, 109, 31);
+    border-radius: 20px;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 14px;
+    cursor: pointer;
+  }
+
+  /* Stil pentru mesajul "No favorite products added yet." */
+  .no-favorites {
+    font-size: 16px;
+    font-style: italic;
+  }

@@ -51,6 +51,7 @@ header {
   font-weight: 200px;
   color: rgb(190, 148, 69);
 }
+
 .h4-text {
   display: flex;
   justify-content: end;
@@ -61,6 +62,7 @@ header {
   color: rgb(190, 148, 69);
   margin-top: 30px;
 }
+
 .step1 {
   display: flex;
   justify-content: center;
@@ -71,15 +73,15 @@ header {
   font-size: 60px;
 }
 
-.pay{
+.pay {
   background-color: white;
-  border:none;
-  color:rgb(47, 196, 84);
-  font-family: 'Times New Roman', Times, serif;
+  border: none;
+  color: rgb(151, 109, 31);
+  font-family: "Times New Roman", Times, serif;
   margin-right: 0px;
-  
 }
-.fav{
+
+.fav {
   margin-right: 100px;
 }
 
@@ -181,10 +183,12 @@ header {
   border-radius: 20px;
   color: #fff;
   margin-left: 60px;
-  
-  text-align: center;
 }
 
+.view:active {
+  top: 2px;
+  position: relative;
+}
 
 .view:hover {
   background-color: rgb(204, 182, 74);
@@ -198,56 +202,33 @@ header {
   color: rgb(225, 212, 137);
   padding: 8px 6px;
 }
+
 .favorite i {
-  vertical-align: middle;
-}
-
-.cart-nav {
-  background-color: transparent;
-  border: none;
-  color: rgb(190, 148, 69);
-  padding: 8px 6px;
-}
-
-.cart-nav i {
   vertical-align: middle;
 }
 
 /*Butoanele shopp si favorite din nav-bar*/
 
-.cart-dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: #f9f9f9;
-  min-width: 200px;
-  box-shadow: 0px 8px 16px 0px rgb(151, 109, 31);
-  padding: 12px 16px;
-  z-index: 1;
-  border-radius: 20px;
-  font-family: "Times New Roman", Times, serif;
-}
-
-.cart-dropdown:hover .cart-dropdown-content {
-  display: block;
-}
-
-.cart-dropdown {
-  position: relative;
-  display: inline-block;
-}
-
 .nav-fav i {
   vertical-align: middle;
 }
 
-.nav-fav {
-  margin-left: 10px;
-  margin-right: 100px;
-  background-color: transparent;
-  border: none;
-  color: rgb(225, 212, 137);
-  padding: 5px 5px;
-  border-radius: 5px;
+.favorite:focus {
+  outline: none;
+}
+
+.favorite:active {
+  top: 2px;
+  position: relative;
+}
+
+.pay:focus {
+  outline: none;
+}
+
+.pay:active {
+  top: 2px;
+  position: relative;
 }
 
 /*Footer*/
@@ -266,6 +247,28 @@ h4 {
   font-family: "Times New Roman", Times, serif;
   color: rgb(151, 109, 31);
 }
+
+/*Animatie*/
+.brand-name,
+.h4-text {
+  opacity: 0;
+}
+
+@keyframes fadeInAnimation {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+#title,
+#subtitle {
+  animation: fadeInAnimation 3s ease-in 0.5s forwards;
+}
+
+/*Alte modificari de pe parcurs*/
 .f-text {
   font-family: "Times New Roman", Times, serif;
   font-weight: 100px;
@@ -297,58 +300,49 @@ hr {
 
 /*responsive*/
 
-/* Stiluri generale pentru carduri */
 .carduri-c .card1 {
-  margin-bottom: 20px; /* Am adaugat un spațiu între carduri pe toate ecranele */
+  margin-bottom: 20px;
 }
-
-/* Reguli pentru ecranele mici (max-width: 767px) */
 @media (max-width: 767px) {
-  .container1 .carousel-inner {
-    display: flex;
-    flex-direction: column;
-  }
-
   .container1 .carousel-item {
-    height: auto; /* Înălțimea caruselului se ajustează automat în funcție de conținut */
+    height: auto;
   }
 
   .container1 .carousel-p {
-    margin-bottom: 20px; /* Am adaugat un spațiu între carusel și carduri */
+    margin-bottom: 20px;
   }
-
   .carduri-c .card1 {
-    margin-bottom: 20px; /* Am adaugat un spațiu între carduri pe ecranele mici */
-  }
-}
-
-@media (max-width: 767px) {
-  .navbar {
-    margin: 20px; /* Am redus margin pentru a centra pe ecranele mici */
+    margin-bottom: 20px;
   }
 
-  .logo {
-    font-size: 20px;
-    margin: 5px;
-  }
+  @media (max-width: 767px) {
+    .navbar {
+      margin: 20px;
+    }
 
-  .navbar-nav {
-    flex-direction: column; /* Am aliniat vertical butoanele pe ecranele mici */
-  }
+    .logo {
+      font-size: 20px;
+      margin: 5px;
+    }
 
-  .nav-item {
-    padding: 5px 0;
-  }
+    .navbar-nav {
+      flex-direction: column;
+    }
 
-  .brand-name {
-    font-size: 24px;
-    margin-right: 0; /* am elimonat margin pentru a centra pe ecranele mici */
-    margin-top: 20px;
-  }
+    .nav-item {
+      padding: 5px 0;
+    }
 
-  .h4-text {
-    font-size: 16px;
-    margin-right: 0;
-    margin-top: 5px;
+    .brand-name {
+      font-size: 24px;
+      margin-right: 0;
+      margin-top: 20px;
+    }
+
+    .h4-text {
+      font-size: 16px;
+      margin-right: 0;
+      margin-top: 5px;
+    }
   }
 }

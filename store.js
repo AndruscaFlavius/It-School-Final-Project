@@ -1,19 +1,22 @@
-var cart = [];
+var cart = []; //Am declarat un array gol unde vor fii stocate produsele
 
-window.onload = function() {
+window.onload = function () {
+  //functia se apeleaza cand pagina este incarcata
   loadCartFromLocalStorage();
 };
 
 function loadCartFromLocalStorage() {
+  //functia aceasta preia datele din localStorage
   var cartData = localStorage.getItem("cart");
   if (cartData) {
     cart = JSON.parse(cartData);
-    updateCart(); // Actualizăm coșul când încărcăm din localStorage
-    updatePayButton(); // Actualizăm butonul de plată, dacă este necesar
+    updateCart(); // Actualizare cos
+    updatePayButton(); //Actualizare buton plata
   }
 }
 
 function addToCart(productName, price) {
+  //aceasta functie adauga produsul in cos
   cart.push({ name: productName, price: price });
   localStorage.setItem("cart", JSON.stringify(cart));
   updateCart();
@@ -21,27 +24,29 @@ function addToCart(productName, price) {
 }
 
 function updateCart() {
+  //functie pt actualizarea cosului
   var cartItemsElement = document.getElementById("cartItems");
   var total = 0;
   var content = "";
 
   for (var i = 0; i < cart.length; i++) {
+    //am folosit for pentru a parcurge produsele din cos
     var item = cart[i];
     content +=
-      "<p>" +
+      "<p style='color:green'>" +
       item.name +
       " - Lei" +
       item.price +
-      " <button onclick='removeFromCart(" +
+      " <button style='background-color: rgb(204, 182, 74); ; border:none ; border-radius:20px; color:white; outline:none ; ' onclick='removeFromCart(" +
       i +
-      ")'>Șterge</button></p>";
+      ")'>Remove</button></p>";
     total += item.price;
   }
 
-  content += "<p><strong>Total: Lei" + total + "</strong></p>";
+  content += "<p style='color:green'><strong>Total: Lei" + total + "</strong></p>"; //in aceasta variabila adaugam informatiile
   cartItemsElement.innerHTML = content;
 
-  var totalAmountElement = document.getElementById("totalAmount");
+  var totalAmountElement = document.getElementById("totalAmount"); //este calculat si totalul
   console.log(totalAmountElement);
   totalAmountElement.innerHTML = "Total: Lei" + total;
 }
@@ -59,11 +64,13 @@ function search() {
   var searchResultContainer = document.getElementById("searchItems");
 
   if (searchInput === "") {
+    //se obtine valoarea introdusa in campul de cautare
     searchResultContainer.innerHTML = "";
     return;
   }
 
   for (var i = 0; i < productsContainer.children.length; i++) {
+    //aici se cauta produsul cautat
     var productCard = productsContainer.children[i];
     var productName = productCard
       .getElementsByTagName("h3")[0]
@@ -74,7 +81,7 @@ function search() {
       break;
     } else {
       searchResultContainer.innerHTML =
-        "<p>Produsul căutat nu a fost găsit.</p>";
+        "<p>Produsul căutat nu a fost găsit.</p>"; //mesaj daca nu se gaseste produsul
     }
   }
 }
@@ -111,44 +118,47 @@ function updatePayButton() {
   }
 }
 
-
-
-
-//fav
+//favorite
 // Funcția pentru a adăuga sau înlătura produsele din lista de favorite și pentru actualizarea stilului butonului "favorite"
 function toggleFavorite(button) {
-  const name = button.getAttribute('data-name');
-  const price = parseFloat(button.getAttribute('data-price'));
-  const isProductInFavorites = button.classList.contains('selected');
+  const name = button.getAttribute("data-name");
+  const price = parseFloat(button.getAttribute("data-price"));
+  const isProductInFavorites = button.classList.contains("selected");
 
-  const favoriteProducts = JSON.parse(localStorage.getItem('favoriteProducts')) || [];
+  const favoriteProducts =
+    JSON.parse(localStorage.getItem("favoriteProducts")) || [];
 
   if (isProductInFavorites) {
-    // Produsul este deja în lista de favorite, așa că îl eliminăm
-    const updatedFavorites = favoriteProducts.filter((product) => !(product.name === name && product.price === price));
-    localStorage.setItem('favoriteProducts', JSON.stringify(updatedFavorites));
-    button.classList.remove('selected');
+    // Produsul este deja în lista de favorite, îl elimin
+    const updatedFavorites = favoriteProducts.filter(
+      (product) => !(product.name === name && product.price === price)
+    );
+    localStorage.setItem("favoriteProducts", JSON.stringify(updatedFavorites));
+    button.classList.remove("selected");
   } else {
-    // Produsul nu este în lista de favorite, așa că îl adăugăm
+    // Produsul nu este în lista de favorite,  îl adăug
     const newProduct = { name: name, price: price };
     favoriteProducts.push(newProduct);
-    localStorage.setItem('favoriteProducts', JSON.stringify(favoriteProducts));
-    button.classList.add('selected');
+    localStorage.setItem("favoriteProducts", JSON.stringify(favoriteProducts));
+    button.classList.add("selected");
   }
 }
 
 // La începutul codului sau într-o funcție apelată la încărcarea paginii
-window.onload = function() {
+window.onload = function () {
   loadFavoritesFromLocalStorage();
 };
 
 function loadFavoritesFromLocalStorage() {
-  const favoriteProducts = JSON.parse(localStorage.getItem('favoriteProducts')) || [];
+  const favoriteProducts =
+    JSON.parse(localStorage.getItem("favoriteProducts")) || [];
 
   favoriteProducts.forEach((product) => {
-    const favoriteButton = document.querySelector(`button.favorite[data-name="${product.name}"][data-price="${product.price}"]`);
+    const favoriteButton = document.querySelector(
+      `button.favorite[data-name="${product.name}"][data-price="${product.price}"]`
+    );
     if (favoriteButton) {
-      favoriteButton.classList.add('selected');
+      favoriteButton.classList.add("selected");
     }
   });
 }

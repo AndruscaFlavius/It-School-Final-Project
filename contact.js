@@ -1,8 +1,25 @@
 //Cu aceasta linise de cod inregistram un eveniment(asteptam ca formularul sa fie completat)
 document.addEventListener("DOMContentLoaded", function () {
+  
+//map
+var mapOptions = {
+  center: [45.77006557379909, 21.252267772023718],
+  zoom: 20
+}
+
+
+var map = new L.map('map', mapOptions);
+
+
+var layer = new L.TileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png');
+
+
+map.addLayer(layer);
+//-map
+
   const form = document.getElementById("abonareForm"); //am preluat elementul cu id"abonareForm"
   const mesajDiv = document.getElementById("mesaj"); //la fel si pe cel ci id"mesaj"
-  let cart = sessionStorage.getItem("cart"); //aici am accsesat valoarea din sessionStorage asociata lui "cart"
+  let cart = sessionStorage.getItem("cart"); //aici am accesat valoarea din sessionStorage asociata lui "cart"
   cart = JSON.parse(cart);
 
   form.addEventListener("submit", function (event) {
@@ -15,14 +32,11 @@ document.addEventListener("DOMContentLoaded", function () {
     const notificari = document.getElementById("notificari").checked;
 
     if (!/^[A-Za-z]+$/.test(nume) || !/^[A-Za-z]+$/.test(prenume)) {
-      mesajDiv.textContent =
-        "Numele și prenumele trebuie să conțină doar litere.";
-      return;
+       return;
     }
 
     if (!email.match(/[a-zA-Z0-9._%+-]+@(gmail\.com|yahoo\.com)$/)) {
-      mesajDiv.textContent =
-        "Adresa de email trebuie să fie de tipul @yahoo.com sau @gmail.com.";
+      
       return;
     }
 
@@ -34,6 +48,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Aici am folosit .reset pentru a reseta formularul dupa abonare 
     form.reset();
-    mesajDiv.textContent = "Felicitari, te-ai abonat cu succes!";
+    mesajDiv.textContent = "Congratulations, you have successfully subscribed!";
   });
 });
+

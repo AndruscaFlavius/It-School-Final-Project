@@ -12,6 +12,8 @@
       <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
     <!--Link bootstrap-->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/leaflet.css" />
     <!--Link pagina css-->
     <link rel="stylesheet" href="contact.css">
 </head>
@@ -21,13 +23,13 @@
 <!--Aici incepe sectiunea Nav-bar-->
 
   <header>
-    <nav class="navbar navbar-expand-sm">
+    <nav class="navbar navbar-expand-sm ">
       <div class="container-fluid">
           <h1 class="logo">Honey Land</h1>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
-          <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+          <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
             <ul class="navbar-nav">
               <li class="nav-item">
                 <a class="nav-link active" aria-current="page" href="/Index.html"><b>Home</b></a>
@@ -41,6 +43,16 @@
             </ul>
           </div>
         </div>
+
+        <a href="payment.html?cartData=" + encodeURIComponent(JSON.stringify(cart))>
+          <button class="pay"><b>Pay</b></button>
+        </a>
+        <a class="fav" href="/favorite.html?favorites=" + encodeURIComponent(JSON.stringify(favoriteProducts))>
+            <button class="favorite">
+              <i class="material-icons">favorite</i>
+            </button>
+        </a>
+
    </nav>
   </header>
 
@@ -64,6 +76,12 @@
 </form>
 <div id="mesaj"></div>
 </div>
+
+<h1>You can find us in our local store!</h1>
+<!--map-->
+<div id = "map" class="map1" style = "width: 700px; height: 580px"></div>
+
+
 <!--Footer-->
 
 <div class="container">
@@ -101,6 +119,8 @@
       </div>
     </div>
    </footer>
+
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/leaflet.js"></script>
 
   <script src="contact.js"></script>
 </body>

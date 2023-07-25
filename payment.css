@@ -96,3 +96,42 @@ hr {
   border: none;
   border-top: 2px solid rgb(151, 109, 31);
 }
+
+.remove{
+  background-color: aqua;
+}
+
+
+/*cart */
+
+.remove-button {
+  background-color: rgb(151, 109, 31);
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 14px;
+  cursor: pointer;
+  border-radius: 20px; 
+  outline: none; 
+}
+
+/* Stilul pentru produsele din coș */
+.cart-item {
+  display: flex;
+  justify-content: space-between;
+  color: green;
+  padding: 10px;
+  margin-bottom: 5px;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  
+}
+.container2{
+  margin-left: 550px;
+  margin-right: 550px;
+  margin-bottom: 50px;
+  margin-top: 50px;
+}
