@@ -10,7 +10,7 @@ function displayCartDetails(cart) {
   var total = 0; //var pentru calcul
   var content = "";
 
-  for (var i = 0; i < cart.length; i++) {//parcurgem produsele din cos 
+  for (var i = 0; i < cart.length; i++) {// se parcurg produsele din cos 
     var item = cart[i];
     content +=
       "<p class='cart-item'>" +

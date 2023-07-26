@@ -226,10 +226,10 @@ hr {
     font-size: 20px;
   }
 
-  /* Aici putem adăuga alte stiluri pentru a face elementele să arate bine pe dispozitive mobile și tablete */
+  
 }
 
-/* Stiluri pentru ecrane cu lățime mai mare de 768px și mai mică sau egală cu 1200px (adică pentru ecrane medii, cum ar fi tabletele în poziție orizontală) */
+ 
 @media (min-width: 769px) and (max-width: 1200px) {
   .logo {
     font-size: 20px;
@@ -248,5 +248,5 @@ hr {
     font-size: 24px;
   }
 
-  /* Aici putem adăuga alte stiluri pentru a face elementele să arate bine pe tablete în poziție orizontală */
+  
 }
