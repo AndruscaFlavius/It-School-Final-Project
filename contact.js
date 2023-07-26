@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", function () {
 //map
 var mapOptions = {
   center: [45.77006557379909, 21.252267772023718],
-  zoom: 20
+  zoom: 15
 }
 
 

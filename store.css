@@ -329,3 +329,84 @@ hr {
   position: relative;
 }
 /*responsive*/
+/* Stilurile existente ale cardului tău ... */
+
+/* Stiluri pentru a face cardul să fie responsive */
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.testimoniale {
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.col-md-3 {
+  flex: 0 0 calc(25% - 20px);
+  max-width: calc(25% - 20px);
+  margin-bottom: 40px;
+}
+
+/* Stiluri pentru dispozitive cu lățime mică, de exemplu telefoane mobile */
+@media only screen and (max-width: 767px) {
+  .col-md-3 {
+      flex: 0 0 calc(50% - 20px);
+      max-width: calc(50% - 20px);
+  }
+}
+
+/* Stiluri pentru dispozitive cu lățime medie, de exemplu tablete */
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .col-md-3 {
+      flex: 0 0 calc(33.33% - 20px);
+      max-width: calc(33.33% - 20px);
+  }
+}
+
+
+
+
+
+@media screen and (max-width: 576px) {
+  .navbar {
+    margin: 10px; /* Reduce marginea pentru a face navbar-ul mai compact */
+  }
+
+  .logo {
+    margin-left: 10px; /* Reduce marginea pentru a face logo-ul mai aproape de marginea ecranului */
+  }
+
+  .navbar-nav {
+    margin-right: 10px; /* Reduce marginea pentru a face butoanele mai aproape de marginea ecranului */
+  }
+
+  .cart-nav,
+  .favorite {
+    font-size: 20px; /* Mărește dimensiunea butoanelor pentru a fi mai ușor de apăsat pe ecranele mici */
+  }
+
+  .search-bar {
+    justify-content: center; /* Centrează bara de căutare pe ecranul mic */
+    margin-bottom: 10px; /* Adaugă o mică margine între bara de căutare și butoanele navbar-ului */
+  }
+
+  .search-bar input[type="text"] {
+    width: 100%; /* Lățimea completă a ecranului pentru bara de căutare */
+    margin-right: 0; /* Elimină marginea dreaptă pentru a umple lățimea ecranului */
+    margin-left: 0; /* Elimină marginea stângă pentru a umple lățimea ecranului */
+  }
+
+  .cart-dropdown-content {
+    min-width: 150px; /* Reduce lățimea meniului drop-down al coșului de cumpărături */
+  }
+}

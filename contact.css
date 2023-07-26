@@ -154,6 +154,10 @@ button {
  
 }
 
+.box{
+  border-radius: 10px;
+}
+
 /*map*/
 
 .map1{
@@ -200,4 +204,49 @@ hr {
   background-image: url(images/Premium\ product\ \(6\).png);
   background-size: cover;
   height: 100vh;
+}
+
+/*responsive*/
+
+@media (max-width: 768px) {
+  .logo {
+    font-size: 18px;
+  }
+
+  .navbar {
+    margin: 10px 20px 10px 20px;
+  }
+
+  .brand-name {
+    font-size: 32px;
+    margin-right: 150px;
+  }
+
+  .h4-text {
+    font-size: 20px;
+  }
+
+  /* Aici putem adăuga alte stiluri pentru a face elementele să arate bine pe dispozitive mobile și tablete */
+}
+
+/* Stiluri pentru ecrane cu lățime mai mare de 768px și mai mică sau egală cu 1200px (adică pentru ecrane medii, cum ar fi tabletele în poziție orizontală) */
+@media (min-width: 769px) and (max-width: 1200px) {
+  .logo {
+    font-size: 20px;
+  }
+
+  .navbar {
+    margin: 15px 30px 15px 30px;
+  }
+
+  .brand-name {
+    font-size: 36px;
+    margin-right: 200px;
+  }
+
+  .h4-text {
+    font-size: 24px;
+  }
+
+  /* Aici putem adăuga alte stiluri pentru a face elementele să arate bine pe tablete în poziție orizontală */
 }

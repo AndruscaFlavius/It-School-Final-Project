@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Pagina de plată</title>
+  <title>Honey Land </title>
   <!--Link pentru font-->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
   <!--Link pentru bootstrap-->
@@ -16,7 +16,7 @@
 <body>
 <!--Navbar-->
   <header>
-    <nav class="navbar navbar-expand-sm ">
+    <nav class="navbar navbar-expand-sm fixed-top scroll-down">
       <div class="container-fluid">
           <h1 class="logo">Honey Land</h1>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -48,19 +48,19 @@
 </div>
 <form id="paymentForm">
   <label class="numar" for="cardNumber"><b>Card Number:</b></label><br>
-  <input type="text" id="cardNumber" required pattern="[0-9]{10}" title="Introduceți un număr de 10 cifre">
+  <input class="box" type="text" id="cardNumber" required pattern="[0-9]{10}" title="Introduceți un număr de 10 cifre">
   <br>
   
   <label class="numar" for="ccv"><b>CCV :</b></label><br>
-  <input type="text" id="ccv" required pattern="[0-9]{3}" title="Introduceți un număr de 3 cifre">
+  <input class="box" type="text" id="ccv" required pattern="[0-9]{3}" title="Introduceți un număr de 3 cifre">
   
   <br>
   <label class="numar" for="name"><b>Name :</b></label><br>
-  <input type="text" id="name" required pattern="[A-Za-z]{5,20}" title="Introduceți un nume de 5-20 caractere, fără numere">
+  <input class="box" type="text" id="name" required pattern="[A-Za-z]{5,20}" title="Introduceți un nume de 5-20 caractere, fără numere">
   <br>
 
   <label class="numar" for="email"><b>E-mail adress :</b></label><br>
-  <input type="email" id="email" required pattern="@(yahoo\.com|gmail\.com)$" title="Introduceți o adresă de e-mail validă (yahoo.com sau gmail.com)">
+  <input class="box" type="email" id="email" required pattern="@(yahoo\.com|gmail\.com)$" title="Introduceți o adresă de e-mail validă (yahoo.com sau gmail.com)">
   <br>
 
   <!-- Butonul de finalizare a plății -->
